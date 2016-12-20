@@ -1,0 +1,23 @@
+import javax.swing.*;
+
+/**
+ * Created by Cláudio Braga on 20/12/2016.
+ */
+ 
+public class UserButtonChoice {
+    public static void main (String[] args){
+        JFrame janela = new JFrame();
+        janela.setTitle("UserButtonChoice");
+        janela.setSize(200, 200);
+        janela.setLocation(50, 50);
+        janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel painel = new JPanel();
+        painel.setLayout(new BoxLayout(painel,BoxLayout.Y_AXIS));
+
+        for (int i = 0; i < 5; i++)
+            painel.add(new JButton("Botão" + (i+1)));
+        janela.add(painel);
+        janela.setVisible(true);
+    }
+}
